@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nishant Kaushle | Business Student, IIM Bangalore</title>
+<meta name="description" content="Nishant Kaushle is a BBA (Digital Business and Entrepreneurship) student at IIM Bangalore with interests in business, finance, technology and entrepreneurship.">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --navy:#0f2a47;--navy-2:#16395f;--accent:#b08a3e;--ink:#1c2430;--mut:#5b6572;
+  --bg:#f7f8fa;--card:#fff;--line:#e2e6ec;--radius:10px;
+  --serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--navy-2)}
+p{margin:0 0 14px}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);color:var(--navy);line-height:1.25}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+.bar{max-width:1080px;margin:auto;display:flex;align-items:center;gap:24px;padding:0 24px}
+.logo{font:700 18px var(--serif);letter-spacing:.14em;color:var(--navy);text-decoration:none;flex:none;padding:16px 0}
+nav{margin-left:auto;display:flex;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{font:500 13.5px var(--sans);color:var(--mut);text-decoration:none;padding:20px 12px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:var(--navy);border-bottom-color:var(--accent)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+.hero .in{max-width:1080px;margin:auto;padding:88px 24px 96px}
+.kick{font:600 12.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#d8bf85;margin-bottom:20px}
+.hero h1{color:#fff;font-size:clamp(36px,6vw,64px);font-weight:700;letter-spacing:-.01em;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:#d8bf85}
+.hero .lead{font-size:19px;max-width:680px;color:#e8edf3}
+.hero p{max-width:680px;color:#c9d3df}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;font:600 14px/1 var(--sans);padding:14px 26px;border-radius:6px;text-decoration:none;border:1px solid #d8bf85;color:#fff;cursor:pointer;background:none;transition:background .2s,color .2s}
+.btn:hover{background:rgba(216,191,133,.15)}
+.btn.fill{background:#d8bf85;color:var(--navy)}
+.btn.fill:hover{background:#e6d09b}
+
+/* Layout */
+main{max-width:1080px;margin:auto;padding:0 24px}
+section{padding:72px 0 8px}
+.sh{margin-bottom:28px}
+.sh .eyebrow{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.sh h2{font-size:30px}
+.sh::after{content:"";display:block;width:44px;height:3px;background:var(--accent);margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:0 1px 2px rgba(15,42,71,.04)}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p:last-child{margin-bottom:0}
+.sub{font-weight:600;color:var(--accent);margin-bottom:10px}
+.muted{color:var(--mut)}
+
+/* About */
+.about p{font-size:17px}
+.about p:last-child{margin-bottom:0}
+
+/* Education */
+.feat{grid-column:1/-1;border-left:4px solid var(--accent)}
+.score{display:inline-block;margin-top:6px;font:600 13px var(--sans);color:var(--navy);background:#eef2f7;border-radius:999px;padding:4px 12px}
+
+/* Skills */
+ul.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 0}
+ul.tags li{padding:5px 14px;font-size:14px;border:1px solid var(--line);background:#f1f4f8;border-radius:999px;color:var(--navy)}
+
+/* Project */
+.proj{display:grid;grid-template-columns:1.4fr 1fr;padding:0;overflow:hidden}
+.pm{padding:30px}
+.pm h3{font-size:22px;margin-bottom:12px}
+.side2{background:var(--navy);color:#fff;padding:30px}
+.side2 h4{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#d8bf85;margin-bottom:14px}
+ul.ck{list-style:none;padding:0;margin:0}
+ul.ck li{position:relative;padding:9px 0 9px 28px;border-top:1px solid rgba(255,255,255,.14);color:#e8edf3}
+ul.ck li:first-child{border-top:0}
+ul.ck li::before{content:"✓";position:absolute;left:0;color:#d8bf85;font-weight:700}
+
+/* Activities */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px 16px 20px;display:flex;gap:16px;align-items:flex-start}
+.steps li::before{content:"";flex:none;width:8px;height:8px;margin-top:10px;border-radius:50%;background:var(--accent)}
+.closing{margin-top:20px;color:var(--mut);font-style:italic}
+
+/* Contact */
+.contact{background:var(--navy);color:#e8edf3;border-radius:var(--radius);padding:44px 40px}
+.contact h2{color:#fff}
+.contact .eyebrow{color:#d8bf85}
+.contact p{color:#c9d3df;max-width:640px}
+.crow{display:flex;flex-wrap:wrap;gap:4px 18px;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)}
+.crow b{min-width:150px;font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#d8bf85}
+.crow a,.crow span{flex:1;min-width:0;word-break:break-word;color:#fff}
+.crow a:hover{color:#d8bf85}
+.contact .btns{margin:24px 0 28px}
+
+/* Resume */
+#resume .paper{background:#fff;color:#1a1a1a;border:1px solid var(--line);border-radius:6px;padding:48px 52px;font:15px/1.6 Georgia,serif;max-width:820px;margin:auto;box-shadow:0 10px 30px rgba(15,42,71,.08)}
+#resume .paper h1{font-size:30px;letter-spacing:.08em;color:#111;margin:0}
+#resume .paper h2{font-size:13px;letter-spacing:.14em;border-bottom:1px solid #bbb;padding-bottom:4px;margin:24px 0 10px;color:#111}
+#resume .paper h3{font-size:15.5px;margin:12px 0 0;color:#111}
+#resume .paper p{margin:0 0 4px;font-size:14.5px;color:#1a1a1a}
+#resume .paper .meta{color:#555;font:13px var(--sans)}
+#resume .paper ul{margin:4px 0 10px;padding-left:20px}
+.rbar{display:flex;justify-content:center;margin-top:24px}
+.rbar .btn{background:var(--navy);color:#fff;border-color:var(--navy)}
+.rbar .btn:hover{background:var(--navy-2)}
+
+footer{max-width:1080px;margin:56px auto 0;padding:24px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--mut)}
+
+@media(max-width:820px){
+  .g2,.g3,.proj{grid-template-columns:1fr}
+  .hero .in{padding:60px 20px 68px}
+  main{padding:0 16px}
+  .bar{padding:0 14px;gap:12px}
+  .logo{font-size:15px}
+  section{padding-top:56px}
+  .contact{padding:30px 22px}
+  .crow b{min-width:0;width:100%}
+  #resume .paper{padding:28px 20px}
+}
+@media print{
+  body{background:#fff}
+  .top,.hero,footer,.rbar,section:not(#resume){display:none!important}
+  main{max-width:none;padding:0}
+  #resume{padding:0}
+  #resume .sh{display:none}
+  #resume .paper{border:0;box-shadow:none;padding:0;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <a class="logo" href="#top">NISHANT</a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#interests">Interests</a><a href="#activities">Activities</a><a href="#resume">Resume</a><a href="#connect">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="in">
+    <p class="kick">Business Student &nbsp;|&nbsp; Aspiring Entrepreneur &nbsp;|&nbsp; Business, Finance &amp; Technology</p>
+    <h1>Nishant <em>Kaushle</em></h1>
+    <p class="lead">A business student interested in how businesses grow, how ideas become opportunities, and how technology shapes the future of business.</p>
+    <p>Currently pursuing a BBA in Digital Business and Entrepreneurship at IIM Bangalore, with a focus on business, management, and the changing digital landscape.</p>
+    <div class="btns">
+      <a class="btn fill" href="#connect">Get in Touch</a>
+      <a class="btn" href="#resume">View Resume</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section id="about">
+  <div class="sh"><p class="eyebrow">01</p><h2>About Me</h2></div>
+  <div class="card about">
+    <p>I enjoy exploring ideas, understanding problems, and thinking about how things can be done differently.</p>
+    <p>My interests lie in business and management, particularly entrepreneurship, finance, and technology. I like understanding how businesses operate, how decisions are made, and how innovative ideas create value.</p>
+    <p>As a student of Digital Business and Entrepreneurship at IIM Bangalore, I am continuously building my knowledge across areas where business and technology meet.</p>
+    <p>I believe learning extends beyond textbooks and classrooms. Every new concept, discussion, and experience is an opportunity to build a broader perspective.</p>
+  </div>
+</section>
+
+<section id="education">
+  <div class="sh"><p class="eyebrow">02</p><h2>Education</h2></div>
+  <div class="grid g2">
+    <div class="card feat">
+      <h3>Bachelor of Business Administration (BBA), Digital Business and Entrepreneurship</h3>
+      <p class="sub">Indian Institute of Management Bangalore (IIM Bangalore)</p>
+      <p>Currently pursuing undergraduate studies with a focus on business fundamentals, digital business, entrepreneurship, and management.</p>
+    </div>
+    <div class="card">
+      <h3>Class XII</h3>
+      <p class="muted">Nachiketa Higher Secondary School, Jabalpur, Madhya Pradesh</p>
+      <span class="score">Score: 70%</span>
+    </div>
+    <div class="card">
+      <h3>Class X</h3>
+      <p class="muted">Bhawa’s Academy Higher Secondary School, Ghansore, Madhya Pradesh</p>
+      <span class="score">Score: 92.8%</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sh"><p class="eyebrow">03</p><h2>Skills &amp; Competencies</h2></div>
+  <div class="grid g3">
+    <div class="card"><h3>Technical</h3><ul class="tags"><li>Microsoft Excel</li><li>Microsoft PowerPoint</li></ul></div>
+    <div class="card"><h3>Professional</h3><ul class="tags"><li>Communication</li><li>Presentation</li><li>Creative Thinking</li><li>Problem-Solving</li><li>Business Understanding</li></ul></div>
+    <div class="card"><h3>Currently Developing</h3><ul class="tags"><li>Data Analytics</li><li>Financial Analysis</li><li>Business Strategy</li><li>Digital Business</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sh"><p class="eyebrow">04</p><h2>Projects &amp; Practical Learning</h2></div>
+  <p class="muted">At the start of my professional journey, I am building practical knowledge alongside my academic studies.</p>
+  <div class="card proj">
+    <div class="pm">
+      <h3>Social Entrepreneurship: Student-Focused Service Idea</h3>
+      <p>Exploring a business concept that addresses the limited availability of late-night beverages for students living in hostels and PGs or studying in libraries.</p>
+      <p>The idea focuses on making tea and coffee accessible during late-night study hours while maintaining reasonable pricing and convenient service.</p>
+    </div>
+    <div class="side2">
+      <h4>Areas Explored</h4>
+      <ul class="ck">
+        <li>Identifying customer problems</li>
+        <li>Understanding consumer needs</li>
+        <li>Developing service-based business ideas</li>
+        <li>Exploring feasibility and value creation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="sh"><p class="eyebrow">05</p><h2>Areas of Interest</h2></div>
+  <div class="grid cards">
+    <div class="card"><h3>Business &amp; Management</h3><p>Business models, management practices, organisational growth, and strategic decision-making.</p></div>
+    <div class="card"><h3>Finance</h3><p>Financial markets, investment concepts, financial statements, and the fundamentals of financial management.</p></div>
+    <div class="card"><h3>Technology</h3><p>How technology influences businesses and creates new opportunities.</p></div>
+    <div class="card"><h3>Entrepreneurship</h3><p>Innovative ideas, identifying problems, and understanding how businesses are built.</p></div>
+    <div class="card"><h3>Data Analytics</h3><p>Using data to understand patterns, support decisions, and solve business problems.</p></div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="sh"><p class="eyebrow">06</p><h2>Activities &amp; Learning</h2></div>
+  <p class="muted">I enjoy exploring topics beyond the regular curriculum and applying what I learn. Current learning activities include:</p>
+  <ul class="steps">
+    <li>Exploring business and entrepreneurship concepts</li>
+    <li>Improving proficiency in Microsoft Excel and PowerPoint</li>
+    <li>Developing an understanding of financial statements and business analysis</li>
+    <li>Learning about data analytics and its applications in business</li>
+    <li>Exploring ideas that address everyday problems through practical solutions</li>
+  </ul>
+  <p class="closing">Continuous learning is an important part of both personal and professional development.</p>
+</section>
+
+<section id="resume">
+  <div class="sh"><p class="eyebrow">07</p><h2>Resume</h2></div>
+  <div class="paper">
+    <h1>NISHANT KAUSHLE</h1>
+    <p class="meta">India</p>
+    <p class="meta">nishantkaushle@gmail.com</p>
+    <p class="meta">linkedin.com/in/nishant-kaushle-b1136044b</p>
+
+    <h2>PROFILE</h2>
+    <p>Business student interested in how businesses grow, how ideas become opportunities, and how technology shapes the future of business. Currently pursuing a BBA in Digital Business and Entrepreneurship at IIM Bangalore, with a focus on business, management, and the changing digital landscape.</p>
+
+    <h2>EDUCATION</h2>
+    <h3>Bachelor of Business Administration (BBA), Digital Business and Entrepreneurship</h3>
+    <p class="meta">Indian Institute of Management Bangalore (IIM Bangalore)</p>
+    <p>Currently pursuing undergraduate studies with a focus on business fundamentals, digital business, entrepreneurship, and management.</p>
+    <h3>Class XII</h3>
+    <p class="meta">Nachiketa Higher Secondary School, Jabalpur, Madhya Pradesh | Score: 70%</p>
+    <h3>Class X</h3>
+    <p class="meta">Bhawa’s Academy Higher Secondary School, Ghansore, Madhya Pradesh | Score: 92.8%</p>
+
+    <h2>SKILLS &amp; COMPETENCIES</h2>
+    <p><b>Technical:</b> Microsoft Excel, Microsoft PowerPoint</p>
+    <p><b>Professional:</b> Communication, Presentation, Creative Thinking, Problem-Solving, Business Understanding</p>
+    <p><b>Currently Developing:</b> Data Analytics, Financial Analysis, Business Strategy, Digital Business</p>
+
+    <h2>PROJECTS &amp; PRACTICAL LEARNING</h2>
+    <h3>Social Entrepreneurship: Student-Focused Service Idea</h3>
+    <p>Exploring a business concept that addresses the limited availability of late-night beverages for students living in hostels and PGs or studying in libraries, making tea and coffee accessible during late-night study hours at reasonable prices.</p>
+    <ul>
+      <li>Identifying customer problems</li>
+      <li>Understanding consumer needs</li>
+      <li>Developing service-based business ideas</li>
+      <li>Exploring feasibility and value creation</li>
+    </ul>
+
+    <h2>AREAS OF INTEREST</h2>
+    <p>Business &amp; Management, Finance, Technology, Entrepreneurship, Data Analytics</p>
+
+    <h2>ACTIVITIES &amp; LEARNING</h2>
+    <ul>
+      <li>Exploring business and entrepreneurship concepts</li>
+      <li>Improving proficiency in Microsoft Excel and PowerPoint</li>
+      <li>Developing an understanding of financial statements and business analysis</li>
+      <li>Learning about data analytics and its applications in business</li>
+      <li>Exploring ideas that address everyday problems through practical solutions</li>
+    </ul>
+  </div>
+  <div class="rbar"><button class="btn" onclick="try{window.print()}catch(e){}">Print / Save Resume as PDF</button></div>
+</section>
+
+<section id="connect" style="padding-bottom:0">
+  <div class="contact">
+    <p class="eyebrow" style="font:600 12px system-ui;letter-spacing:.16em;text-transform:uppercase;color:#d8bf85;margin-bottom:8px">08</p>
+    <h2>Let’s Connect</h2>
+    <p style="margin-top:16px">I welcome conversations about business, entrepreneurship, technology, and new ideas. Feel free to reach out.</p>
+    <div class="btns">
+      <a class="btn fill" href="mailto:nishantkaushle@gmail.com">Email Me</a>
+      <a class="btn" href="https://www.linkedin.com/in/nishant-kaushle-b1136044b">LinkedIn</a>
+      <a class="btn" href="https://www.instagram.com/nishantkaushle_67?vrfl=NGl3YjFhb3BmOGI3">Instagram</a>
+    </div>
+    <div class="crow"><b>Email</b><a href="mailto:nishantkaushle@gmail.com">nishantkaushle@gmail.com</a></div>
+    <div class="crow"><b>LinkedIn</b><a href="https://www.linkedin.com/in/nishant-kaushle-b1136044b">linkedin.com/in/nishant-kaushle-b1136044b</a></div>
+    <div class="crow"><b>Instagram</b><a href="https://www.instagram.com/nishantkaushle_67?vrfl=NGl3YjFhb3BmOGI3">instagram.com/nishantkaushle_67</a></div>
+    <div class="crow"><b>Location</b><span>India</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer>&copy; 2026 Nishant Kaushle</footer>
+
+</body>
+</html>
